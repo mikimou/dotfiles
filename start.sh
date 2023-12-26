@@ -68,6 +68,7 @@ cd ~
 git clone https://github.com/mikimou/dotfiles.git
 cp -a ~/dotfiles/. ~
 cp -a ~/dotfiles/Downloads/. ~/Downloads/
+cp -a ~/dotfiles/fonts/. /usr/share/fonts/
 sudo cp -rf ~/dotfiles/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop
 sudo systemctl start docker
 echo
