@@ -1,4 +1,4 @@
 configuration {
-	
+	font: "SauceCodePro Nerd Font Mono 11";
 }
 @theme "~/.cache/wal/colors-rofi-dark.rasi"
