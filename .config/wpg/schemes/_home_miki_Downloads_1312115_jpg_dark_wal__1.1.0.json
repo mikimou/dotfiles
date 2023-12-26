@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/miki/Downloads/1312115.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#040D17",
+        "foreground": "#bff3f1",
+        "cursor": "#bff3f1"
+    },
+    "colors": {
+        "color0": "#040D17",
+        "color1": "#176170",
+        "color2": "#248B7A",
+        "color3": "#1B768A",
+        "color4": "#467892",
+        "color5": "#2897A1",
+        "color6": "#4FD2CD",
+        "color7": "#bff3f1",
+        "color8": "#85aaa8",
+        "color9": "#176170",
+        "color10": "#248B7A",
+        "color11": "#1B768A",
+        "color12": "#467892",
+        "color13": "#2897A1",
+        "color14": "#4FD2CD",
+        "color15": "#bff3f1"
+    }
+}

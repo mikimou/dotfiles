@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/miki/Downloads/sergio-capuzzimati-iiRuvE0TSWM-unsplash.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#010A10",
+        "foreground": "#ded8cd",
+        "cursor": "#ded8cd"
+    },
+    "colors": {
+        "color0": "#010A10",
+        "color1": "#495655",
+        "color2": "#5D655D",
+        "color3": "#6F7367",
+        "color4": "#7F8072",
+        "color5": "#8F8A76",
+        "color6": "#A6A291",
+        "color7": "#ded8cd",
+        "color8": "#9b978f",
+        "color9": "#495655",
+        "color10": "#5D655D",
+        "color11": "#6F7367",
+        "color12": "#7F8072",
+        "color13": "#8F8A76",
+        "color14": "#A6A291",
+        "color15": "#ded8cd"
+    }
+}

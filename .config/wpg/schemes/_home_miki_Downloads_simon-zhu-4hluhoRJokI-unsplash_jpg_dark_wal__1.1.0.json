@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/miki/Downloads/simon-zhu-4hluhoRJokI-unsplash.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#071419",
+        "foreground": "#9cc3e2",
+        "cursor": "#9cc3e2"
+    },
+    "colors": {
+        "color0": "#071419",
+        "color1": "#7B8178",
+        "color2": "#ED9E56",
+        "color3": "#135F9F",
+        "color4": "#5B649E",
+        "color5": "#3B7BC3",
+        "color6": "#B26FA3",
+        "color7": "#9cc3e2",
+        "color8": "#6d889e",
+        "color9": "#7B8178",
+        "color10": "#ED9E56",
+        "color11": "#135F9F",
+        "color12": "#5B649E",
+        "color13": "#3B7BC3",
+        "color14": "#B26FA3",
+        "color15": "#9cc3e2"
+    }
+}

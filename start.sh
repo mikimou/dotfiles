@@ -1,0 +1,75 @@
+sudo pacman -Syu
+sudo pacman -S alacritty \
+alsa-utils \
+breeze \
+breeze-gtk \
+cava \
+cmake \
+docker \
+docker-compose \
+dunst \
+feh \
+fuse2 \
+ghostscript \
+git \
+gnome-terminal \
+gnome-themes-extra \
+htop \
+jre-openjdk \
+libadwaita \
+lollypop \
+lxappearance \
+lxsession \
+man-db \
+nano \
+nemo \
+neofetch \
+neovim \
+nitrogen \
+npm \
+obs-studio \
+pavucontrol \
+picom \
+pipewire \
+pipewire-alsa \
+pipewire-jack \
+pipewire-pulse \
+python-dbus-next \
+python-pip \
+python-psutil \
+python-pywal \
+qjackctl \
+qtile \
+rofi \
+rofi-calc \
+scrcpy \
+scrot \
+thunar \
+unzip \
+vlc \
+wireplumber \
+xsettingsd \
+github-cli
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+yay -S wpgtk \
+vscodium-bin \
+themix-full-git \
+qtile-extras-git \
+pycharm-community-jre \
+helvum-git \
+gtk-theme-flat-color-git \
+google-chrome \
+chrome-remote-desktop \
+brightness-controller-git \
+brave-bin \
+audiorelay \
+adwaita-qt5-git
+cd ~
+git clone https://github.com/mikimou/dotfiles.git
+cp -a ~/dotfiles/. ~
+cp -a ~/dotfiles/Downloads/. ~/Downloads/
+sudo cp -rf ~/dotfiles/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop
+sudo systemctl start docker
+echo
+echo "Setup complete!"
+echo

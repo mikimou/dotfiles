@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/miki/.config/wpg/wallpapers/curvy-narrow-muddy-road-dark-forest-surrounded-by-greenery-little-light-coming-from.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#111111",
+        "foreground": "#cac9c4",
+        "cursor": "#cac9c4"
+    },
+    "colors": {
+        "color0": "#111111",
+        "color1": "#3E4243",
+        "color2": "#535346",
+        "color3": "#676757",
+        "color4": "#6B6D50",
+        "color5": "#7E8065",
+        "color6": "#8E906A",
+        "color7": "#cac9c4",
+        "color8": "#8d8c89",
+        "color9": "#3E4243",
+        "color10": "#535346",
+        "color11": "#676757",
+        "color12": "#6B6D50",
+        "color13": "#7E8065",
+        "color14": "#8E906A",
+        "color15": "#cac9c4"
+    }
+}
