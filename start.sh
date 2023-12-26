@@ -3,7 +3,6 @@ sudo pacman -S alacritty \
 alsa-utils \
 breeze \
 breeze-gtk \
-cava \
 cmake \
 docker \
 docker-compose \
@@ -63,7 +62,8 @@ chrome-remote-desktop \
 brightness-controller-git \
 brave-bin \
 audiorelay \
-adwaita-qt5-git
+adwaita-qt5-git \
+cava
 cd ~
 git clone https://github.com/mikimou/dotfiles.git
 cp -arf ~/dotfiles/. ~
@@ -71,6 +71,7 @@ cp -a ~/dotfiles/Downloads/. ~/Downloads/
 sudo cp -a ~/dotfiles/fonts/. /usr/share/fonts/
 sudo cp -rf ~/dotfiles/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop
 sudo systemctl start docker
+wal -i ~/Downloads/
 echo
 echo "Setup complete!"
 echo
