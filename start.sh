@@ -48,14 +48,15 @@ unzip \
 vlc \
 wireplumber \
 xsettingsd \
-github-cli
+github-cli \
+noto-fonts \
+helvum
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S wpgtk \
-vscodium-bin \
+visual-studio-code-bin \
 themix-full-git \
 qtile-extras-git \
 pycharm-community-jre \
-helvum-git \
 gtk-theme-flat-color-git \
 google-chrome \
 chrome-remote-desktop \
