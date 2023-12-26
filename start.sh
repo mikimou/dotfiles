@@ -72,6 +72,7 @@ sudo cp -a ~/dotfiles/fonts/. /usr/share/fonts/
 sudo cp -rf ~/dotfiles/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop
 sudo systemctl start docker
 wal -i ~/Downloads/
+wpg-install.sh -g
 echo
 echo "Setup complete!"
 echo
