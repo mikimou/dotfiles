@@ -74,7 +74,7 @@ XORG_DUMMY_VIDEO_RAM = 1048576 # KiB
 # with large or multiple monitors. This is a comma-separated list of
 # resolutions that will be made available if the X server supports RANDR. These
 # defaults can be overridden in ~/.profile.
-DEFAULT_SIZES = "1600x1200,3840x2560"
+DEFAULT_SIZES = "1920x1080"
 
 # Decides number of monitors and their resolution that should be run for the
 # wayland session.
@@ -109,7 +109,7 @@ SYSTEM_PRE_SESSION_FILE_PATH = "/etc/chrome-remote-desktop-pre-session"
 DEBIAN_XSESSION_PATH = "/etc/X11/Xsession"
 
 X_LOCK_FILE_TEMPLATE = "/tmp/.X%d-lock"
-FIRST_X_DISPLAY_NUMBER = 20
+FIRST_X_DISPLAY_NUMBER = 0
 
 # Amount of time to wait between relaunching processes.
 SHORT_BACKOFF_TIME = 5
@@ -729,16 +729,22 @@ class Desktop(abc.ABC):
     """Launches process required for session and records the backoff time
     for inhibitors so that process restarts are not attempted again until
     that time has passed."""
-    logging.info("Setting up and launching session")
+    self._init_child_env()
+    #self._setup_pulseaudio()
     self._setup_gnubby()
-    self._launch_server(server_args)
-    if not self._launch_pre_session():
+    #self._launch_x_server(x_args)
+    #self._launch_x_session()
+    display = self.get_unused_display_number()
+    self.child_env["DISPLAY"] = ":%d" % display
+
+    #self._launch_server(server_args)
+    #if not self._launch_pre_session():
       # If there was no pre-session script, launch the session immediately.
-      self.launch_desktop_session()
+    #  self.launch_desktop_session()
     self.server_inhibitor.record_started(MINIMUM_PROCESS_LIFETIME,
-                                      backoff_time)
-    self.session_inhibitor.record_started(MINIMUM_PROCESS_LIFETIME,
                                      backoff_time)
+    self.session_inhibitor.record_started(MINIMUM_PROCESS_LIFETIME,
+                                    backoff_time)
 
   def _wait_for_setup_before_host_launch(self):
     """
@@ -1365,9 +1371,9 @@ class XDesktop(Desktop):
     """Return a candidate display number for which there is currently no
     X Server lock file"""
     display = FIRST_X_DISPLAY_NUMBER
-    while os.path.exists(X_LOCK_FILE_TEMPLATE % display):
-      display += 1
-    return display
+    #while os.path.exists(X_LOCK_FILE_TEMPLATE % display):
+    #  display += 1
+    return 0
 
   def _init_child_env(self):
     super(XDesktop, self)._init_child_env()
@@ -1380,10 +1386,6 @@ class XDesktop(Desktop):
   def launch_session(self, *args, **kwargs):
     logging.info("Launching X server and X session.")
     super(XDesktop, self).launch_session(*args, **kwargs)
-
-  # Returns child environment not containing TMPDIR.
-  # Certain values of TMPDIR can break the X server (crbug.com/672684), so we
-  # want to make sure it isn't set in the environment used to start the server.
   def _x_env(self):
     if "TMPDIR" not in self.child_env:
       return self.child_env
